@@ -1,0 +1,16 @@
+<!-- cakes/templates/cakes/delete_cake.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Cake</title>
+</head>
+<body>
+    <h1>Delete Cake</h1>
+    <p>Are you sure you want to delete "{{ cake.name }}"?</p>
+    <form method="post" action="">
+        {% csrf_token %}
+        <button type="submit">Yes, Delete</button>
+    </form>
+    <a href="{% url 'cake_list' %}">Cancel</a>
+</body>
+</html>

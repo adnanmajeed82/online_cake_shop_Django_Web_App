@@ -1,0 +1,16 @@
+<!-- cakes/templates/cakes/add_cake.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Cake</title>
+</head>
+<body>
+    <h1>Add Cake</h1>
+    <form method="post" action="{% url 'add_cake' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Cake</button>
+    </form>
+    <a href="{% url 'cake_list' %}">Back to Cake List</a>
+</body>
+</html>

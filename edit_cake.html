@@ -1,0 +1,16 @@
+<!-- cakes/templates/cakes/edit_cake.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Cake</title>
+</head>
+<body>
+    <h1>Edit Cake</h1>
+    <form method="post" enctype="multipart/form-data" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save Changes</button>
+    </form>
+    <a href="{% url 'cake_list' %}">Back to Cake List</a>
+</body>
+</html>
